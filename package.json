@@ -12,7 +12,7 @@
 		"cors": "^2.8.5"
 	},
 	"repository": {
-		"url": "https://github.com/freeCodeCamp/boilerplate-project-exercisetracker"
+		"url": "https://github.com/memorandumtk/exerciseTracker_Express.git"
 	},
 	"license": "MIT",
 	"keywords": [
