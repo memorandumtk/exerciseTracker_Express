@@ -9,3 +9,6 @@ This is the boilerplate for the Exercise Tracker project. Instructions for build
 https://mongoosejs.com/docs/defaults.html
 ### surprising point was
 *Note: Mongoose only applies a default if the value of the path is strictly undefined*
+
+
+## Mongoose Default Shchema Date type = ISO 8601 string type e.g."2011-10-05T14:48:00.000Z"
