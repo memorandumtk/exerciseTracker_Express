@@ -72,6 +72,7 @@ const exerciseLog = async (req, res) => {
     try {
         const allLogs = await Exercise
             .find({ user: requestId })
+            // find documents based on query "from" and "to"
             .find({
                 date: {
                     $gte: fromQuery ? fromQuery : new Date(0).toISOString(),
@@ -79,6 +80,7 @@ const exerciseLog = async (req, res) => {
                 }
             })
             .sort({ _id: 1 })
+            // limit number of documents based on query "limit"
             .limit(
                 limitQuery ? limitQuery : ''
             )
@@ -116,6 +118,7 @@ router.post("/:id/exercises", exerciseCreate)
 
 router.get("/:id/logs", exerciseLog)
 
+// For reflesh both of collections
 const collectionsDelete = async (req, res) => {
     try {
         await Exercise.deleteMany({});
